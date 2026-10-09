@@ -1,0 +1,1614 @@
+Script started on 2026-09-22 09:14:26+07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="90" LINES="43"]
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mqemu-system-arm \[27m
+[7m  -M vexpress-a9 \[27m
+[7m  -cpu cortex-a9 \[27m
+[7m  -m 512M \[27m
+[7m  -smp 2 \[27m
+[7m  -nographic \[27m
+[7m  -kernel ~/embedded_lab1/output/zImage \[27m
+[7m  -dtb ~/embedded_lab1/output/vexpress-v2p-ca9.dtb \[27m
+[7m  -initrd ~/embedded_lab2/output/initramfs_lab2.cpio.gz \[27m
+[7m  -append 'console=ttyAMA0,115200 rdinit=/sbin/init mem=512M'[27m[A[A[A[A[A[A[A[A[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ qemu-system-arm \
+  -M vexpress-a9 \
+  -cpu cortex-a9 \
+  -m 512M \
+  -smp 2 \
+  -nographic \
+  -kernel ~/embedded_lab1/output/zImage \
+  -dtb ~/embedded_lab1/output/vexpress-v2p-ca9.dtb \
+  -initrd ~/embedded_lab2/output/initramfs_lab2.cpio.gz \
+  -append 'console=ttyAMA0,115200 rdinit=/sbin/init mem=512M'
+[?2004l]133;C\]666;vte.shell.preexec!\Booting Linux on physical CPU 0x0
+Linux version 5.15.0 (quyen@quyen-ThinkPad-T14-Gen-1) (arm-linux-gnueabihf-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ld (GNU Binutils for Ubuntu) 2.46) #1 SMP Mon Sep 14 18:56:00 +07 2026
+CPU: ARMv7 Processor [410fc090] revision 0 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+OF: fdt: Machine model: V2P-CA9
+Memory policy: Data cache writealloc
+Reserved memory: created DMA memory pool at 0x4c000000, size 8 MiB
+OF: reserved mem: initialized node vram@4c000000, compatible id shared-dma-pool
+cma: Reserved 16 MiB at 0x7f000000
+Zone ranges:
+  Normal   [mem 0x0000000060000000-0x000000007fffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000060000000-0x000000007fffffff]
+Initmem setup node 0 [mem 0x0000000060000000-0x000000007fffffff]
+percpu: Embedded 15 pages/cpu s30156 r8192 d23092 u61440
+Built 1 zonelists, mobility grouping on.  Total pages: 130048
+Kernel command line: console=ttyAMA0,115200 rdinit=/sbin/init mem=512M
+printk: log_buf_len individual max cpu contribution: 4096 bytes
+printk: log_buf_len total cpu_extra contributions: 12288 bytes
+printk: log_buf_len min size: 16384 bytes
+printk: log_buf_len: 32768 bytes
+printk: early log buf free: 14980(91%)
+Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+Memory: 489760K/524288K available (8192K kernel code, 593K rwdata, 1784K rodata, 1024K init, 151K bss, 18144K reserved, 16384K cma-reserved)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+trace event string verifier disabled
+rcu: Hierarchical RCU implementation.
+rcu: 	RCU event tracing is enabled.
+rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C: platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C: DT/platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 dynamic clock gating disabled, standby mode disabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x46420001
+random: get_random_bytes called from start_kernel+0x4f8/0x6ac with crng_init=0
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: arm,sp804: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Failed to initialize '/bus@40000000/motherboard-bus@40000000/iofpga@7,00000000/timer@12000': -22
+smp_twd: clock not found -2
+Console: colour dummy device 80x30
+Calibrating local timer... 100.47MHz.
+Calibrating delay loop... 657.81 BogoMIPS (lpj=3289088)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+CPU0: Spectre v2: using BPIALL workaround
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x60100000 - 0x60100060
+rcu: Hierarchical SRCU implementation.
+smp: Bringing up secondary CPUs ...
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU1: Spectre v2: using BPIALL workaround
+CPU2: failed to boot: -38
+CPU3: failed to boot: -38
+smp: Brought up 1 node, 2 CPUs
+SMP: Total of 2 processors activated (1292.69 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 0
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+hw-breakpoint: debug architecture 0x4 unsupported.
+Serial: AMBA PL011 UART driver
+irq: type mismatch, failed to map hwirq-75 for interrupt-controller@1e001000!
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource arm,sp804
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
+TCP bind hash table entries: 4096 (order: 3, 32768 bytes, linear)
+TCP: Hash tables configured (established 4096 bind 4096)
+UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Unpacking initramfs...
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+workingset: timestamp_bits=30 max_order=17 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+9p: Installing v9fs 9p2000 file system support
+io scheduler mq-deadline registered
+io scheduler kyber registered
+sii902x 0-0060: supply iovcc not found, using dummy regulator
+sii902x 0-0060: supply cvcc12 not found, using dummy regulator
+Freeing initrd memory: 1120K
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x40000000-0x43ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x44000000-0x47ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+Concatenating MTD devices:
+(0): "40000000.flash"
+(1): "40000000.flash"
+into device "40000000.flash"
+physmap-flash 48000000.psram: physmap platform flash device: [mem 0x48000000-0x49ffffff]
+libphy: Fixed MDIO Bus: probed
+libphy: smsc911x-mdio: probed
+smsc911x 4e000000.ethernet eth0: MAC Address: 52:54:00:12:34:56
+isp1760 4f000000.usb: isp1760 bus width: 32, oc: digital
+isp1760 4f000000.usb: NXP ISP1760 USB Host Controller
+isp1760 4f000000.usb: new USB bus registered, assigned bus number 1
+isp1760 4f000000.usb: Scratch test failed. 0x00000000
+isp1760 4f000000.usb: can't setup: -19
+isp1760 4f000000.usb: USB bus 1 deregistered
+usbcore: registered new interface driver usb-storage
+ledtrig-cpu: registered to indicate activity on CPUs
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_PACKET protocol family
+9pnet: Installing 9P2000 support
+Registering SWP/SWPB emulation handler
+aaci-pl041 10004000.aaci: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+aaci-pl041 10004000.aaci: FIFO 512 entries
+mmci-pl18x 10005000.mmci: Got CD GPIO
+mmci-pl18x 10005000.mmci: Got WP GPIO
+mmci-pl18x 10005000.mmci: mmc0: PL181 manf 41 rev0 at 0x10005000 irq 33,34 (pio)
+10009000.uart: ttyAMA0 at MMIO 0x10009000 (irq = 37, base_baud = 0) is a PL011 rev1
+printk: console [ttyAMA0] enabled
+1000a000.uart: ttyAMA1 at MMIO 0x1000a000 (irq = 38, base_baud = 0) is a PL011 rev1
+1000b000.uart: ttyAMA2 at MMIO 0x1000b000 (irq = 39, base_baud = 0) is a PL011 rev1
+1000c000.uart: ttyAMA3 at MMIO 0x1000c000 (irq = 40, base_baud = 0) is a PL011 rev1
+rtc-pl031 10017000.rtc: registered as rtc0
+rtc-pl031 10017000.rtc: setting system clock to 2026-09-22T02:14:40 UTC (1790043280)
+amba 10020000.clcd: Fixing up cyclic dependency with 0-0039
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+input: AT Raw Set 2 keyboard as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10006000.kmi/serio0/input/input0
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+sii902x 0-0039: supply iovcc not found, using dummy regulator
+sii902x 0-0039: supply cvcc12 not found, using dummy regulator
+i2c i2c-0: Added multiplexed i2c bus 2
+drm-clcd-pl111 1001f000.clcd: assigned reserved memory node vram@4c000000
+drm-clcd-pl111 1001f000.clcd: using device-specific reserved memory
+drm-clcd-pl111 1001f000.clcd: core tile graphics present
+drm-clcd-pl111 1001f000.clcd: this device will be deactivated
+drm-clcd-pl111 1001f000.clcd: Versatile Express init failed - -19
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+drm-clcd-pl111 10020000.clcd: found bridge on endpoint 0
+drm-clcd-pl111 10020000.clcd: Using non-panel bridge
+[drm] Initialized pl111 1.0.0 20170317 for 10020000.clcd on minor 0
+Console: switching to colour frame buffer device 128x48
+drm-clcd-pl111 10020000.clcd: [drm] fb0: pl111 frame buffer device
+ALSA device list:
+  #0: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+Freeing unused kernel image (initmem) memory: 1024K
+Run /sbin/init as init process
+[ LAB-02 ] Starting system initialization...
+input: ImExPS/2 Generic Explorer Mouse as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10007000.kmi/serio1/input/input2
+[ LAB-02 ] Loading lab2_driver module...
+lab2_driver: loading out-of-tree module taints kernel.
+lab2_driver: initializing module
+lab2_driver: /proc/lab2_info created
+lab2_driver: loaded, major=240
+[ LAB-02 ] lab2_driver loaded OK
+mknod: /dev/lab2: File exists
+[ LAB-02 ] /dev/lab2 created (major=240, minor=0)
+[ LAB-02 ] System initialization complete!
+  -> Run test_driver.sh to test character device
+  -> Run test_procfs.sh to test proc/sysfs interfaces
+  -> cat /proc/lab2_info to view driver stats
+
+Please press Enter to activate this console. random: fast init done
+
+/ # lsmod
+lab2_driver 16384 0 - Live 0x7f000000 (O)
+/ # ls -la /dev/lab2
+crw-rw-rw-    1 root     0         240,   0 Sep 22 02:14 [1;35m/dev/lab2[m
+/ # cat /proc/lab2_info
+LAB-02 Driver Statistics
+======================
+Driver name   : lab2
+Major number  : 240
+Buffer size   : 1024 bytes
+Data length   : 0 bytes
+Open count    : 0
+/ # ls /sys/class/lab2_class/lab2/
+[0;0mbuffer_len[m  [0;0mlast_data[m   [1;34mpower[m       [0;0muevent[m
+[0;0mdev[m         [0;0mopen_count[m  [1;36msubsystem[m
+/ # dmesg | grep lab2
+lab2_driver: loading out-of-tree module taints kernel.
+lab2_driver: initializing module
+lab2_driver: /proc/lab2_info created
+lab2_driver: loaded, major=240
+/ # test_driver.sh
+=== LAB-02: Device Driver Test ===
+[1] Loading lab2_driver...
+insmod: can't insert '/lib/modules/5.15.0/lab2_driver.ko': File exists
+ERROR: insmod failed!
+/ # echo 'Hello from userspace, LAB-02!' > /dev/lab2
+lab2_driver: device opened (count=1)
+lab2_driver: received 30 bytes: [Hello from userspace, LAB-02!
+]
+lab2_driver: device closed
+/ # cat /dev/lab2
+lab2_driver: device opened (count=2)
+lab2_driver: sent 30 bytes to user
+Hello from userspace, LAB-02!
+lab2_driver: device closed
+/ # rmmod lab2_driver
+lab2_driver: module unloaded
+/ # test_driver.sh
+=== LAB-02: Device Driver Test ===
+[1] Loading lab2_driver...
+lab2_driver: initializing module
+lab2_driver: /proc/lab2_info created
+lab2_driver: loaded, major=240
+[2] Loaded modules:
+lab2_driver 16384 0 - Live 0x7f000000 (O)
+[3] Creating device node...
+ (node already exists)
+crw-------    1 root     0         240,   0 Sep 22 02:16 [1;35m/dev/lab2[m
+[4] Writing to device...
+lab2_driver: device opened (count=1)
+lab2_driver: received 30 bytes: [Hello from userspace, LAB-02!
+]
+lab2_driver: device closed
+[5] Reading from device...
+lab2_driver: device opened (count=2)
+lab2_driver: sent 30 bytes to user
+lab2_driver: device closed
+   Read back: [Hello from userspace, LAB-02!]
+[6] Multiple write/read test...
+lab2_driver: device opened (count=3)
+lab2_driver: received 10 bytes: [Message_1
+]
+lab2_driver: device closed
+lab2_driver: device opened (count=4)
+lab2_driver: sent 10 bytes to user
+Message_1
+lab2_driver: device closed
+lab2_driver: device opened (count=5)
+lab2_driver: received 10 bytes: [Message_2
+]
+lab2_driver: device closed
+lab2_driver: device opened (count=6)
+lab2_driver: sent 10 bytes to user
+Message_2
+lab2_driver: device closed
+lab2_driver: device opened (count=7)
+lab2_driver: received 10 bytes: [Message_3
+]
+lab2_driver: device closed
+lab2_driver: device opened (count=8)
+lab2_driver: sent 10 bytes to user
+Message_3
+lab2_driver: device closed
+[7] Kernel messages (dmesg):
+lab2_driver: device closed
+lab2_driver: device opened (count=6)
+lab2_driver: sent 10 bytes to user
+lab2_driver: device closed
+lab2_driver: device opened (count=7)
+lab2_driver: received 10 bytes: [Message_3
+lab2_driver: device closed
+lab2_driver: device opened (count=8)
+lab2_driver: sent 10 bytes to user
+lab2_driver: device closed
+=== Test PASSED ===
+/ # QEMU: Terminated
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mcat ~/embedded_lab2/logs/[27m[7mb[27m[7moot_log.txt[27m[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ cat ~/embedded_lab2/logs/boot_log.txt
+[?2004l]133;C\]666;vte.shell.preexec!\Script started on 2026-09-22 09:14:26+07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="90" LINES="43"]
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mqemu-system-arm \[27m
+[7m  -M vexpress-a9 \[27m
+[7m  -cpu cortex-a9 \[27m
+[7m  -m 512M \[27m
+[7m  -smp 2 \[27m
+[7m  -nographic \[27m
+[7m  -kernel ~/embedded_lab1/output/zImage \[27m
+[7m  -dtb ~/embedded_lab1/output/vexpress-v2p-ca9.dtb \[27m
+[7m  -initrd ~/embedded_lab2/output/initramfs_lab2.cpio.gz \[27m
+[7m  -append 'console=ttyAMA0,115200 rdinit=/sbin/init mem=512M'[27m[A[A[A[A[A[A[A[A[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ qemu-system-arm \
+  -M vexpress-a9 \
+  -cpu cortex-a9 \
+  -m 512M \
+  -smp 2 \
+  -nographic \
+  -kernel ~/embedded_lab1/output/zImage \
+  -dtb ~/embedded_lab1/output/vexpress-v2p-ca9.dtb \
+  -initrd ~/embedded_lab2/output/initramfs_lab2.cpio.gz \
+  -append 'console=ttyAMA0,115200 rdinit=/sbin/init mem=512M'
+[?2004l]133;C\]666;vte.shell.preexec!\Booting Linux on physical CPU 0x0
+Linux version 5.15.0 (quyen@quyen-ThinkPad-T14-Gen-1) (arm-linux-gnueabihf-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ld (GNU Binutils for Ubuntu) 2.46) #1 SMP Mon Sep 14 18:56:00 +07 2026
+CPU: ARMv7 Processor [410fc090] revision 0 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+OF: fdt: Machine model: V2P-CA9
+Memory policy: Data cache writealloc
+Reserved memory: created DMA memory pool at 0x4c000000, size 8 MiB
+OF: reserved mem: initialized node vram@4c000000, compatible id shared-dma-pool
+cma: Reserved 16 MiB at 0x7f000000
+Zone ranges:
+  Normal   [mem 0x0000000060000000-0x000000007fffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000060000000-0x000000007fffffff]
+Initmem setup node 0 [mem 0x0000000060000000-0x000000007fffffff]
+percpu: Embedded 15 pages/cpu s30156 r8192 d23092 u61440
+Built 1 zonelists, mobility grouping on.  Total pages: 130048
+Kernel command line: console=ttyAMA0,115200 rdinit=/sbin/init mem=512M
+printk: log_buf_len individual max cpu contribution: 4096 bytes
+printk: log_buf_len total cpu_extra contributions: 12288 bytes
+printk: log_buf_len min size: 16384 bytes
+printk: log_buf_len: 32768 bytes
+printk: early log buf free: 14980(91%)
+Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+Memory: 489760K/524288K available (8192K kernel code, 593K rwdata, 1784K rodata, 1024K init, 151K bss, 18144K reserved, 16384K cma-reserved)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+trace event string verifier disabled
+rcu: Hierarchical RCU implementation.
+rcu: 	RCU event tracing is enabled.
+rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C: platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C: DT/platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 dynamic clock gating disabled, standby mode disabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x46420001
+random: get_random_bytes called from start_kernel+0x4f8/0x6ac with crng_init=0
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: arm,sp804: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Failed to initialize '/bus@40000000/motherboard-bus@40000000/iofpga@7,00000000/timer@12000': -22
+smp_twd: clock not found -2
+Console: colour dummy device 80x30
+Calibrating local timer... 100.47MHz.
+Calibrating delay loop... 657.81 BogoMIPS (lpj=3289088)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+CPU0: Spectre v2: using BPIALL workaround
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x60100000 - 0x60100060
+rcu: Hierarchical SRCU implementation.
+smp: Bringing up secondary CPUs ...
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU1: Spectre v2: using BPIALL workaround
+CPU2: failed to boot: -38
+CPU3: failed to boot: -38
+smp: Brought up 1 node, 2 CPUs
+SMP: Total of 2 processors activated (1292.69 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 0
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+hw-breakpoint: debug architecture 0x4 unsupported.
+Serial: AMBA PL011 UART driver
+irq: type mismatch, failed to map hwirq-75 for interrupt-controller@1e001000!
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource arm,sp804
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
+TCP bind hash table entries: 4096 (order: 3, 32768 bytes, linear)
+TCP: Hash tables configured (established 4096 bind 4096)
+UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Unpacking initramfs...
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+workingset: timestamp_bits=30 max_order=17 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+9p: Installing v9fs 9p2000 file system support
+io scheduler mq-deadline registered
+io scheduler kyber registered
+sii902x 0-0060: supply iovcc not found, using dummy regulator
+sii902x 0-0060: supply cvcc12 not found, using dummy regulator
+Freeing initrd memory: 1120K
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x40000000-0x43ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x44000000-0x47ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+Concatenating MTD devices:
+(0): "40000000.flash"
+(1): "40000000.flash"
+into device "40000000.flash"
+physmap-flash 48000000.psram: physmap platform flash device: [mem 0x48000000-0x49ffffff]
+libphy: Fixed MDIO Bus: probed
+libphy: smsc911x-mdio: probed
+smsc911x 4e000000.ethernet eth0: MAC Address: 52:54:00:12:34:56
+isp1760 4f000000.usb: isp1760 bus width: 32, oc: digital
+isp1760 4f000000.usb: NXP ISP1760 USB Host Controller
+isp1760 4f000000.usb: new USB bus registered, assigned bus number 1
+isp1760 4f000000.usb: Scratch test failed. 0x00000000
+isp1760 4f000000.usb: can't setup: -19
+isp1760 4f000000.usb: USB bus 1 deregistered
+usbcore: registered new interface driver usb-storage
+ledtrig-cpu: registered to indicate activity on CPUs
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_PACKET protocol family
+9pnet: Installing 9P2000 support
+Registering SWP/SWPB emulation handler
+aaci-pl041 10004000.aaci: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+aaci-pl041 10004000.aaci: FIFO 512 entries
+mmci-pl18x 10005000.mmci: Got CD GPIO
+mmci-pl18x 10005000.mmci: Got WP GPIO
+mmci-pl18x 10005000.mmci: mmc0: PL181 manf 41 rev0 at 0x10005000 irq 33,34 (pio)
+10009000.uart: ttyAMA0 at MMIO 0x10009000 (irq = 37, base_baud = 0) is a PL011 rev1
+printk: console [ttyAMA0] enabled
+1000a000.uart: ttyAMA1 at MMIO 0x1000a000 (irq = 38, base_baud = 0) is a PL011 rev1
+1000b000.uart: ttyAMA2 at MMIO 0x1000b000 (irq = 39, base_baud = 0) is a PL011 rev1
+1000c000.uart: ttyAMA3 at MMIO 0x1000c000 (irq = 40, base_baud = 0) is a PL011 rev1
+rtc-pl031 10017000.rtc: registered as rtc0
+rtc-pl031 10017000.rtc: setting system clock to 2026-09-22T02:14:40 UTC (1790043280)
+amba 10020000.clcd: Fixing up cyclic dependency with 0-0039
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+input: AT Raw Set 2 keyboard as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10006000.kmi/serio0/input/input0
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+sii902x 0-0039: supply iovcc not found, using dummy regulator
+sii902x 0-0039: supply cvcc12 not found, using dummy regulator
+i2c i2c-0: Added multiplexed i2c bus 2
+drm-clcd-pl111 1001f000.clcd: assigned reserved memory node vram@4c000000
+drm-clcd-pl111 1001f000.clcd: using device-specific reserved memory
+drm-clcd-pl111 1001f000.clcd: core tile graphics present
+drm-clcd-pl111 1001f000.clcd: this device will be deactivated
+drm-clcd-pl111 1001f000.clcd: Versatile Express init failed - -19
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+drm-clcd-pl111 10020000.clcd: found bridge on endpoint 0
+drm-clcd-pl111 10020000.clcd: Using non-panel bridge
+[drm] Initialized pl111 1.0.0 20170317 for 10020000.clcd on minor 0
+Console: switching to colour frame buffer device 128x48
+drm-clcd-pl111 10020000.clcd: [drm] fb0: pl111 frame buffer device
+ALSA device list:
+  #0: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+Freeing unused kernel image (initmem) memory: 1024K
+Run /sbin/init as init process
+[ LAB-02 ] Starting system initialization...
+input: ImExPS/2 Generic Explorer Mouse as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10007000.kmi/serio1/input/input2
+[ LAB-02 ] Loading lab2_driver module...
+lab2_driver: loading out-of-tree module taints kernel.
+lab2_driver: initializing module
+lab2_driver: /proc/lab2_info created
+lab2_driver: loaded, major=240
+[ LAB-02 ] lab2_driver loaded OK
+mknod: /dev/lab2: File exists
+[ LAB-02 ] /dev/lab2 created (major=240, minor=0)
+[ LAB-02 ] System initialization complete!
+  -> Run test_driver.sh to test character device
+  -> Run test_procfs.sh to test proc/sysfs interfaces
+  -> cat /proc/lab2_info to view driver stats
+
+Please press Enter to activate this console. random: fast init done
+
+/ # lsmod
+lab2_driver 16384 0 - Live 0x7f000000 (O)
+/ # ls -la /dev/lab2
+crw-rw-rw-    1 root     0         240,   0 Sep 22 02:14 [1;35m/dev/lab2[m
+/ # cat /proc/lab2_info
+LAB-02 Driver Statistics
+======================
+Driver name   : lab2
+Major number  : 240
+Buffer size   : 1024 bytes
+Data length   : 0 bytes
+Open count    : 0
+/ # ls /sys/class/lab2_class/lab2/
+[0;0mbuffer_len[m  [0;0mlast_data[m   [1;34mpower[m       [0;0muevent[m
+[0;0mdev[m         [0;0mopen_count[m  [1;36msubsystem[m
+/ # dmesg | grep lab2
+lab2_driver: loading out-of-tree module taints kernel.
+lab2_driver: initializing module
+lab2_driver: /proc/lab2_info created
+lab2_driver: loaded, major=240
+/ # test_driver.sh
+=== LAB-02: Device Driver Test ===
+[1] Loading lab2_driver...
+insmod: can't insert '/lib/modules/5.15.0/lab2_driver.ko': File exists
+ERROR: insmod failed!
+/ # echo 'Hello from userspace, LAB-02!' > /dev/lab2
+lab2_driver: device opened (count=1)
+lab2_driver: received 30 bytes: [Hello from userspace, LAB-02!
+]
+lab2_driver: device closed
+/ # cat /dev/lab2
+lab2_driver: device opened (count=2)
+lab2_driver: sent 30 bytes to user
+Hello from userspace, LAB-02!
+lab2_driver: device closed
+/ # rmmod lab2_driver
+lab2_driver: module unloaded
+/ # test_driver.sh
+=== LAB-02: Device Driver Test ===
+[1] Loading lab2_driver...
+lab2_driver: initializing module
+lab2_driver: /proc/lab2_info created
+lab2_driver: loaded, major=240
+[2] Loaded modules:
+lab2_driver 16384 0 - Live 0x7f000000 (O)
+[3] Creating device node...
+ (node already exists)
+crw-------    1 root     0         240,   0 Sep 22 02:16 [1;35m/dev/lab2[m
+[4] Writing to device...
+lab2_driver: device opened (count=1)
+lab2_driver: received 30 bytes: [Hello from userspace, LAB-02!
+]
+lab2_driver: device closed
+[5] Reading from device...
+lab2_driver: device opened (count=2)
+lab2_driver: sent 30 bytes to user
+lab2_driver: device closed
+   Read back: [Hello from userspace, LAB-02!]
+[6] Multiple write/read test...
+lab2_driver: device opened (count=3)
+lab2_driver: received 10 bytes: [Message_1
+]
+lab2_driver: device closed
+lab2_driver: device opened (count=4)
+lab2_driver: sent 10 bytes to user
+Message_1
+lab2_driver: device closed
+lab2_driver: device opened (count=5)
+lab2_driver: received 10 bytes: [Message_2
+]
+lab2_driver: device closed
+lab2_driver: device opened (count=6)
+lab2_driver: sent 10 bytes to user
+Message_2
+lab2_driver: device closed
+lab2_driver: device opened (count=7)
+lab2_driver: received 10 bytes: [Message_3
+]
+lab2_driver: device closed
+lab2_driver: device opened (count=8)
+lab2_driver: sent 10 bytes to user
+Message_3
+lab2_driver: device closed
+[7] Kernel messages (dmesg):
+lab2_driver: device closed
+lab2_driver: device opened (count=6)
+lab2_driver: sent 10 bytes to user
+lab2_driver: device closed
+lab2_driver: device opened (count=7)
+lab2_driver: received 10 bytes: [Message_3
+lab2_driver: device closed
+lab2_driver: device opened (count=8)
+lab2_driver: sent 10 bytes to user
+lab2_driver: device closed
+=== Test PASSED ===
+/ # QEMU: Terminated
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mcat ~/embedded_lab2/logs/[27m[7mb[27m[7moot_log.txt[27m[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ cat ~/embedded_lab2/logs/boot_log.txt
+[?2004l]133;C\]666;vte.shell.preexec!\Script started on 2026-09-22 09:14:26+07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="90" LINES="43"]
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mqemu-system-arm \[27m
+[7m  -M vexpress-a9 \[27m
+[7m  -cpu cortex-a9 \[27m
+[7m  -m 512M \[27m
+[7m  -smp 2 \[27m
+[7m  -nographic \[27m
+[7m  -kernel ~/embedded_lab1/output/zImage \[27m
+[7m  -dtb ~/embedded_lab1/output/vexpress-v2p-ca9.dtb \[27m
+[7m  -initrd ~/embedded_lab2/output/initramfs_lab2.cpio.gz \[27m
+[7m  -append 'console=ttyAMA0,115200 rdinit=/sbin/init mem=512M'[27m[A[A[A[A[A[A[A[A[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ qemu-system-arm \
+  -M vexpress-a9 \
+  -cpu cortex-a9 \
+  -m 512M \
+  -smp 2 \
+  -nographic \
+  -kernel ~/embedded_lab1/output/zImage \
+  -dtb ~/embedded_lab1/output/vexpress-v2p-ca9.dtb \
+  -initrd ~/embedded_lab2/output/initramfs_lab2.cpio.gz \
+  -append 'console=ttyAMA0,115200 rdinit=/sbin/init mem=512M'
+[?2004l]133;C\]666;vte.shell.preexec!\Booting Linux on physical CPU 0x0
+Linux version 5.15.0 (quyen@quyen-ThinkPad-T14-Gen-1) (arm-linux-gnueabihf-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ld (GNU Binutils for Ubuntu) 2.46) #1 SMP Mon Sep 14 18:56:00 +07 2026
+CPU: ARMv7 Processor [410fc090] revision 0 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+OF: fdt: Machine model: V2P-CA9
+Memory policy: Data cache writealloc
+Reserved memory: created DMA memory pool at 0x4c000000, size 8 MiB
+OF: reserved mem: initialized node vram@4c000000, compatible id shared-dma-pool
+cma: Reserved 16 MiB at 0x7f000000
+Zone ranges:
+  Normal   [mem 0x0000000060000000-0x000000007fffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000060000000-0x000000007fffffff]
+Initmem setup node 0 [mem 0x0000000060000000-0x000000007fffffff]
+percpu: Embedded 15 pages/cpu s30156 r8192 d23092 u61440
+Built 1 zonelists, mobility grouping on.  Total pages: 130048
+Kernel command line: console=ttyAMA0,115200 rdinit=/sbin/init mem=512M
+printk: log_buf_len individual max cpu contribution: 4096 bytes
+printk: log_buf_len total cpu_extra contributions: 12288 bytes
+printk: log_buf_len min size: 16384 bytes
+printk: log_buf_len: 32768 bytes
+printk: early log buf free: 14980(91%)
+Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+Memory: 489760K/524288K available (8192K kernel code, 593K rwdata, 1784K rodata, 1024K init, 151K bss, 18144K reserved, 16384K cma-reserved)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+trace event string verifier disabled
+rcu: Hierarchical RCU implementation.
+rcu: 	RCU event tracing is enabled.
+rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C: platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C: DT/platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 dynamic clock gating disabled, standby mode disabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x46420001
+random: get_random_bytes called from start_kernel+0x4f8/0x6ac with crng_init=0
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: arm,sp804: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Failed to initialize '/bus@40000000/motherboard-bus@40000000/iofpga@7,00000000/timer@12000': -22
+smp_twd: clock not found -2
+Console: colour dummy device 80x30
+Calibrating local timer... 100.47MHz.
+Calibrating delay loop... 657.81 BogoMIPS (lpj=3289088)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+CPU0: Spectre v2: using BPIALL workaround
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x60100000 - 0x60100060
+rcu: Hierarchical SRCU implementation.
+smp: Bringing up secondary CPUs ...
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU1: Spectre v2: using BPIALL workaround
+CPU2: failed to boot: -38
+CPU3: failed to boot: -38
+smp: Brought up 1 node, 2 CPUs
+SMP: Total of 2 processors activated (1292.69 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 0
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+hw-breakpoint: debug architecture 0x4 unsupported.
+Serial: AMBA PL011 UART driver
+irq: type mismatch, failed to map hwirq-75 for interrupt-controller@1e001000!
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource arm,sp804
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
+TCP bind hash table entries: 4096 (order: 3, 32768 bytes, linear)
+TCP: Hash tables configured (established 4096 bind 4096)
+UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Unpacking initramfs...
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+workingset: timestamp_bits=30 max_order=17 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+9p: Installing v9fs 9p2000 file system support
+io scheduler mq-deadline registered
+io scheduler kyber registered
+sii902x 0-0060: supply iovcc not found, using dummy regulator
+sii902x 0-0060: supply cvcc12 not found, using dummy regulator
+Freeing initrd memory: 1120K
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x40000000-0x43ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x44000000-0x47ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+Concatenating MTD devices:
+(0): "40000000.flash"
+(1): "40000000.flash"
+into device "40000000.flash"
+physmap-flash 48000000.psram: physmap platform flash device: [mem 0x48000000-0x49ffffff]
+libphy: Fixed MDIO Bus: probed
+libphy: smsc911x-mdio: probed
+smsc911x 4e000000.ethernet eth0: MAC Address: 52:54:00:12:34:56
+isp1760 4f000000.usb: isp1760 bus width: 32, oc: digital
+isp1760 4f000000.usb: NXP ISP1760 USB Host Controller
+isp1760 4f000000.usb: new USB bus registered, assigned bus number 1
+isp1760 4f000000.usb: Scratch test failed. 0x00000000
+isp1760 4f000000.usb: can't setup: -19
+isp1760 4f000000.usb: USB bus 1 deregistered
+usbcore: registered new interface driver usb-storage
+ledtrig-cpu: registered to indicate activity on CPUs
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_PACKET protocol family
+9pnet: Installing 9P2000 support
+Registering SWP/SWPB emulation handler
+aaci-pl041 10004000.aaci: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+aaci-pl041 10004000.aaci: FIFO 512 entries
+mmci-pl18x 10005000.mmci: Got CD GPIO
+mmci-pl18x 10005000.mmci: Got WP GPIO
+mmci-pl18x 10005000.mmci: mmc0: PL181 manf 41 rev0 at 0x10005000 irq 33,34 (pio)
+10009000.uart: ttyAMA0 at MMIO 0x10009000 (irq = 37, base_baud = 0) is a PL011 rev1
+printk: console [ttyAMA0] enabled
+1000a000.uart: ttyAMA1 at MMIO 0x1000a000 (irq = 38, base_baud = 0) is a PL011 rev1
+1000b000.uart: ttyAMA2 at MMIO 0x1000b000 (irq = 39, base_baud = 0) is a PL011 rev1
+1000c000.uart: ttyAMA3 at MMIO 0x1000c000 (irq = 40, base_baud = 0) is a PL011 rev1
+rtc-pl031 10017000.rtc: registered as rtc0
+rtc-pl031 10017000.rtc: setting system clock to 2026-09-22T02:14:40 UTC (1790043280)
+amba 10020000.clcd: Fixing up cyclic dependency with 0-0039
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+input: AT Raw Set 2 keyboard as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10006000.kmi/serio0/input/input0
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+sii902x 0-0039: supply iovcc not found, using dummy regulator
+sii902x 0-0039: supply cvcc12 not found, using dummy regulator
+i2c i2c-0: Added multiplexed i2c bus 2
+drm-clcd-pl111 1001f000.clcd: assigned reserved memory node vram@4c000000
+drm-clcd-pl111 1001f000.clcd: using device-specific reserved memory
+drm-clcd-pl111 1001f000.clcd: core tile graphics present
+drm-clcd-pl111 1001f000.clcd: this device will be deactivated
+drm-clcd-pl111 1001f000.clcd: Versatile Express init failed - -19
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+drm-clcd-pl111 10020000.clcd: found bridge on endpoint 0
+drm-clcd-pl111 10020000.clcd: Using non-panel bridge
+[drm] Initialized pl111 1.0.0 20170317 for 10020000.clcd on minor 0
+Console: switching to colour frame buffer device 128x48
+drm-clcd-pl111 10020000.clcd: [drm] fb0: pl111 frame buffer device
+ALSA device list:
+  #0: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+Freeing unused kernel image (initmem) memory: 1024K
+Run /sbin/init as init process
+[ LAB-02 ] Starting system initialization...
+input: ImExPS/2 Generic Explorer Mouse as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10007000.kmi/serio1/input/input2
+[ LAB-02 ] Loading lab2_driver module...
+lab2_driver: loading out-of-tree module taints kernel.
+lab2_driver: initializing module
+lab2_driver: /proc/lab2_info created
+lab2_driver: loaded, major=240
+[ LAB-02 ] lab2_driver loaded OK
+mknod: /dev/lab2: File exists
+[ LAB-02 ] /dev/lab2 created (major=240, minor=0)
+[ LAB-02 ] System initialization complete!
+  -> Run test_driver.sh to test character device
+  -> Run test_procfs.sh to test proc/sysfs interfaces
+  -> cat /proc/lab2_info to view driver stats
+
+Please press Enter to activate this console. random: fast init done
+
+/ # lsmod
+lab2_driver 16384 0 - Live 0x7f000000 (O)
+/ # ls -la /dev/lab2
+crw-rw-rw-    1 root     0         240,   0 Sep 22 02:14 [1;35m/dev/lab2[m
+/ # cat /proc/lab2_info
+LAB-02 Driver Statistics
+======================
+Driver name   : lab2
+Major number  : 240
+Buffer size   : 1024 bytes
+Data length   : 0 bytes
+Open count    : 0
+/ # ls /sys/class/lab2_class/lab2/
+[0;0mbuffer_len[m  [0;0mlast_data[m   [1;34mpower[m       [0;0muevent[m
+[0;0mdev[m         [0;0mopen_count[m  [1;36msubsystem[m
+/ # dmesg | grep lab2
+lab2_driver: loading out-of-tree module taints kernel.
+lab2_driver: initializing module
+lab2_driver: /proc/lab2_info created
+lab2_driver: loaded, major=240
+/ # test_driver.sh
+=== LAB-02: Device Driver Test ===
+[1] Loading lab2_driver...
+insmod: can't insert '/lib/modules/5.15.0/lab2_driver.ko': File exists
+ERROR: insmod failed!
+/ # echo 'Hello from userspace, LAB-02!' > /dev/lab2
+lab2_driver: device opened (count=1)
+lab2_driver: received 30 bytes: [Hello from userspace, LAB-02!
+]
+lab2_driver: device closed
+/ # cat /dev/lab2
+lab2_driver: device opened (count=2)
+lab2_driver: sent 30 bytes to user
+Hello from userspace, LAB-02!
+lab2_driver: device closed
+/ # rmmod lab2_driver
+lab2_driver: module unloaded
+/ # test_driver.sh
+=== LAB-02: Device Driver Test ===
+[1] Loading lab2_driver...
+lab2_driver: initializing module
+lab2_driver: /proc/lab2_info created
+lab2_driver: loaded, major=240
+[2] Loaded modules:
+lab2_driver 16384 0 - Live 0x7f000000 (O)
+[3] Creating device node...
+ (node already exists)
+crw-------    1 root     0         240,   0 Sep 22 02:16 [1;35m/dev/lab2[m
+[4] Writing to device...
+lab2_driver: device opened (count=1)
+lab2_driver: received 30 bytes: [Hello from userspace, LAB-02!
+]
+lab2_driver: device closed
+[5] Reading from device...
+lab2_driver: device opened (count=2)
+lab2_driver: sent 30 bytes to user
+lab2_driver: device closed
+   Read back: [Hello from userspace, LAB-02!]
+[6] Multiple write/read test...
+lab2_driver: device opened (count=3)
+lab2_driver: received 10 bytes: [Message_1
+]
+lab2_driver: device closed
+lab2_driver: device opened (count=4)
+lab2_driver: sent 10 bytes to user
+Message_1
+lab2_driver: device closed
+lab2_driver: device opened (count=5)
+lab2_driver: received 10 bytes: [Message_2
+]
+lab2_driver: device closed
+lab2_driver: device opened (count=6)
+lab2_driver: sent 10 bytes to user
+Message_2
+lab2_driver: device closed
+lab2_driver: device opened (count=7)
+lab2_driver: received 10 bytes: [Message_3
+]
+lab2_driver: device closed
+lab2_driver: device opened (count=8)
+lab2_driver: sent 10 bytes to user
+Message_3
+lab2_driver: device closed
+[7] Kernel messages (dmesg):
+lab2_driver: device closed
+lab2_driver: device opened (count=6)
+lab2_driver: sent 10 bytes to user
+lab2_driver: device closed
+lab2_driver: device opened (count=7)
+lab2_driver: received 10 bytes: [Message_3
+lab2_driver: device closed
+lab2_driver: device opened (count=8)
+lab2_driver: sent 10 bytes to user
+lab2_driver: device closed
+=== Test PASSED ===
+/ # QEMU: Terminated
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mcat ~/embedded_lab2/logs/[27m[7mb[27m[7moot_log.txt[27m[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ cat ~/embedded_lab2/logs/boot_log.txt
+[?2004l]133;C\]666;vte.shell.preexec!\Script started on 2026-09-22 09:14:26+07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="90" LINES="43"]
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mqemu-system-arm \[27m
+[7m  -M vexpress-a9 \[27m
+[7m  -cpu cortex-a9 \[27m
+[7m  -m 512M \[27m
+[7m  -smp 2 \[27m
+[7m  -nographic \[27m
+[7m  -kernel ~/embedded_lab1/output/zImage \[27m
+[7m  -dtb ~/embedded_lab1/output/vexpress-v2p-ca9.dtb \[27m
+[7m  -initrd ~/embedded_lab2/output/initramfs_lab2.cpio.gz \[27m
+[7m  -append 'console=ttyAMA0,115200 rdinit=/sbin/init mem=512M'[27m[A[A[A[A[A[A[A[A[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ qemu-system-arm \
+  -M vexpress-a9 \
+  -cpu cortex-a9 \
+  -m 512M \
+  -smp 2 \
+  -nographic \
+  -kernel ~/embedded_lab1/output/zImage \
+  -dtb ~/embedded_lab1/output/vexpress-v2p-ca9.dtb \
+  -initrd ~/embedded_lab2/output/initramfs_lab2.cpio.gz \
+  -append 'console=ttyAMA0,115200 rdinit=/sbin/init mem=512M'
+[?2004l]133;C\]666;vte.shell.preexec!\Booting Linux on physical CPU 0x0
+Linux version 5.15.0 (quyen@quyen-ThinkPad-T14-Gen-1) (arm-linux-gnueabihf-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ld (GNU Binutils for Ubuntu) 2.46) #1 SMP Mon Sep 14 18:56:00 +07 2026
+CPU: ARMv7 Processor [410fc090] revision 0 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+OF: fdt: Machine model: V2P-CA9
+Memory policy: Data cache writealloc
+Reserved memory: created DMA memory pool at 0x4c000000, size 8 MiB
+OF: reserved mem: initialized node vram@4c000000, compatible id shared-dma-pool
+cma: Reserved 16 MiB at 0x7f000000
+Zone ranges:
+  Normal   [mem 0x0000000060000000-0x000000007fffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000060000000-0x000000007fffffff]
+Initmem setup node 0 [mem 0x0000000060000000-0x000000007fffffff]
+percpu: Embedded 15 pages/cpu s30156 r8192 d23092 u61440
+Built 1 zonelists, mobility grouping on.  Total pages: 130048
+Kernel command line: console=ttyAMA0,115200 rdinit=/sbin/init mem=512M
+printk: log_buf_len individual max cpu contribution: 4096 bytes
+printk: log_buf_len total cpu_extra contributions: 12288 bytes
+printk: log_buf_len min size: 16384 bytes
+printk: log_buf_len: 32768 bytes
+printk: early log buf free: 14980(91%)
+Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+Memory: 489760K/524288K available (8192K kernel code, 593K rwdata, 1784K rodata, 1024K init, 151K bss, 18144K reserved, 16384K cma-reserved)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+trace event string verifier disabled
+rcu: Hierarchical RCU implementation.
+rcu: 	RCU event tracing is enabled.
+rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C: platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C: DT/platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 dynamic clock gating disabled, standby mode disabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x46420001
+random: get_random_bytes called from start_kernel+0x4f8/0x6ac with crng_init=0
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: arm,sp804: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Failed to initialize '/bus@40000000/motherboard-bus@40000000/iofpga@7,00000000/timer@12000': -22
+smp_twd: clock not found -2
+Console: colour dummy device 80x30
+Calibrating local timer... 100.47MHz.
+Calibrating delay loop... 657.81 BogoMIPS (lpj=3289088)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+CPU0: Spectre v2: using BPIALL workaround
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x60100000 - 0x60100060
+rcu: Hierarchical SRCU implementation.
+smp: Bringing up secondary CPUs ...
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU1: Spectre v2: using BPIALL workaround
+CPU2: failed to boot: -38
+CPU3: failed to boot: -38
+smp: Brought up 1 node, 2 CPUs
+SMP: Total of 2 processors activated (1292.69 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 0
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+hw-breakpoint: debug architecture 0x4 unsupported.
+Serial: AMBA PL011 UART driver
+irq: type mismatch, failed to map hwirq-75 for interrupt-controller@1e001000!
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource arm,sp804
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
+TCP bind hash table entries: 4096 (order: 3, 32768 bytes, linear)
+TCP: Hash tables configured (established 4096 bind 4096)
+UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Unpacking initramfs...
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+workingset: timestamp_bits=30 max_order=17 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+9p: Installing v9fs 9p2000 file system support
+io scheduler mq-deadline registered
+io scheduler kyber registered
+sii902x 0-0060: supply iovcc not found, using dummy regulator
+sii902x 0-0060: supply cvcc12 not found, using dummy regulator
+Freeing initrd memory: 1120K
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x40000000-0x43ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x44000000-0x47ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+Concatenating MTD devices:
+(0): "40000000.flash"
+(1): "40000000.flash"
+into device "40000000.flash"
+physmap-flash 48000000.psram: physmap platform flash device: [mem 0x48000000-0x49ffffff]
+libphy: Fixed MDIO Bus: probed
+libphy: smsc911x-mdio: probed
+smsc911x 4e000000.ethernet eth0: MAC Address: 52:54:00:12:34:56
+isp1760 4f000000.usb: isp1760 bus width: 32, oc: digital
+isp1760 4f000000.usb: NXP ISP1760 USB Host Controller
+isp1760 4f000000.usb: new USB bus registered, assigned bus number 1
+isp1760 4f000000.usb: Scratch test failed. 0x00000000
+isp1760 4f000000.usb: can't setup: -19
+isp1760 4f000000.usb: USB bus 1 deregistered
+usbcore: registered new interface driver usb-storage
+ledtrig-cpu: registered to indicate activity on CPUs
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_PACKET protocol family
+9pnet: Installing 9P2000 support
+Registering SWP/SWPB emulation handler
+aaci-pl041 10004000.aaci: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+aaci-pl041 10004000.aaci: FIFO 512 entries
+mmci-pl18x 10005000.mmci: Got CD GPIO
+mmci-pl18x 10005000.mmci: Got WP GPIO
+mmci-pl18x 10005000.mmci: mmc0: PL181 manf 41 rev0 at 0x10005000 irq 33,34 (pio)
+10009000.uart: ttyAMA0 at MMIO 0x10009000 (irq = 37, base_baud = 0) is a PL011 rev1
+printk: console [ttyAMA0] enabled
+1000a000.uart: ttyAMA1 at MMIO 0x1000a000 (irq = 38, base_baud = 0) is a PL011 rev1
+1000b000.uart: ttyAMA2 at MMIO 0x1000b000 (irq = 39, base_baud = 0) is a PL011 rev1
+1000c000.uart: ttyAMA3 at MMIO 0x1000c000 (irq = 40, base_baud = 0) is a PL011 rev1
+rtc-pl031 10017000.rtc: registered as rtc0
+rtc-pl031 10017000.rtc: setting system clock to 2026-09-22T02:14:40 UTC (1790043280)
+amba 10020000.clcd: Fixing up cyclic dependency with 0-0039
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+input: AT Raw Set 2 keyboard as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10006000.kmi/serio0/input/input0
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+sii902x 0-0039: supply iovcc not found, using dummy regulator
+sii902x 0-0039: supply cvcc12 not found, using dummy regulator
+i2c i2c-0: Added multiplexed i2c bus 2
+drm-clcd-pl111 1001f000.clcd: assigned reserved memory node vram@4c000000
+drm-clcd-pl111 1001f000.clcd: using device-specific reserved memory
+drm-clcd-pl111 1001f000.clcd: core tile graphics present
+drm-clcd-pl111 1001f000.clcd: this device will be deactivated
+drm-clcd-pl111 1001f000.clcd: Versatile Express init failed - -19
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+drm-clcd-pl111 10020000.clcd: found bridge on endpoint 0
+drm-clcd-pl111 10020000.clcd: Using non-panel bridge
+[drm] Initialized pl111 1.0.0 20170317 for 10020000.clcd on minor 0
+Console: switching to colour frame buffer device 128x48
+drm-clcd-pl111 10020000.clcd: [drm] fb0: pl111 frame buffer device
+ALSA device list:
+  #0: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+Freeing unused kernel image (initmem) memory: 1024K
+Run /sbin/init as init process
+[ LAB-02 ] Starting system initialization...
+input: ImExPS/2 Generic Explorer Mouse as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10007000.kmi/serio1/input/input2
+[ LAB-02 ] Loading lab2_driver module...
+lab2_driver: loading out-of-tree module taints kernel.
+lab2_driver: initializing module
+lab2_driver: /proc/lab2_info created
+lab2_driver: loaded, major=240
+[ LAB-02 ] lab2_driver loaded OK
+mknod: /dev/lab2: File exists
+[ LAB-02 ] /dev/lab2 created (major=240, minor=0)
+[ LAB-02 ] System initialization complete!
+  -> Run test_driver.sh to test character device
+  -> Run test_procfs.sh to test proc/sysfs interfaces
+  -> cat /proc/lab2_info to view driver stats
+
+Please press Enter to activate this console. random: fast init done
+
+/ # lsmod
+lab2_driver 16384 0 - Live 0x7f000000 (O)
+/ # ls -la /dev/lab2
+crw-rw-rw-    1 root     0         240,   0 Sep 22 02:14 [1;35m/dev/lab2[m
+/ # cat /proc/lab2_info
+LAB-02 Driver Statistics
+======================
+Driver name   : lab2
+Major number  : 240
+Buffer size   : 1024 bytes
+Data length   : 0 bytes
+Open count    : 0
+/ # ls /sys/class/lab2_class/lab2/
+[0;0mbuffer_len[m  [0;0mlast_data[m   [1;34mpower[m       [0;0muevent[m
+[0;0mdev[m         [0;0mopen_count[m  [1;36msubsystem[m
+/ # dmesg | grep lab2
+lab2_driver: loading out-of-tree module taints kernel.
+lab2_driver: initializing module
+lab2_driver: /proc/lab2_info created
+lab2_driver: loaded, major=240
+/ # test_driver.sh
+=== LAB-02: Device Driver Test ===
+[1] Loading lab2_driver...
+insmod: can't insert '/lib/modules/5.15.0/lab2_driver.ko': File exists
+ERROR: insmod failed!
+/ # echo 'Hello from userspace, LAB-02!' > /dev/lab2
+lab2_driver: device opened (count=1)
+lab2_driver: received 30 bytes: [Hello from userspace, LAB-02!
+]
+lab2_driver: device closed
+/ # cat /dev/lab2
+lab2_driver: device opened (count=2)
+lab2_driver: sent 30 bytes to user
+Hello from userspace, LAB-02!
+lab2_driver: device closed
+/ # rmmod lab2_driver
+lab2_driver: module unloaded
+/ # test_driver.sh
+=== LAB-02: Device Driver Test ===
+[1] Loading lab2_driver...
+lab2_driver: initializing module
+lab2_driver: /proc/lab2_info created
+lab2_driver: loaded, major=240
+[2] Loaded modules:
+lab2_driver 16384 0 - Live 0x7f000000 (O)
+[3] Creating device node...
+ (node already exists)
+crw-------    1 root     0         240,   0 Sep 22 02:16 [1;35m/dev/lab2[m
+[4] Writing to device...
+lab2_driver: device opened (count=1)
+lab2_driver: received 30 bytes: [Hello from userspace, LAB-02!
+]
+lab2_driver: device closed
+[5] Reading from device...
+lab2_driver: device opened (count=2)
+lab2_driver: sent 30 bytes to user
+lab2_driver: device closed
+   Read back: [Hello from userspace, LAB-02!]
+[6] Multiple write/read test...
+lab2_driver: device opened (count=3)
+lab2_driver: received 10 bytes: [Message_1
+]
+lab2_driver: device closed
+lab2_driver: device opened (count=4)
+lab2_driver: sent 10 bytes to user
+Message_1
+lab2_driver: device closed
+lab2_driver: device opened (count=5)
+lab2_driver: received 10 bytes: [Message_2
+]
+lab2_driver: device closed
+lab2_driver: device opened (count=6)
+lab2_driver: sent 10 bytes to user
+Message_2
+lab2_driver: device closed
+lab2_driver: device opened (count=7)
+lab2_driver: received 10 bytes: [Message_3
+]
+lab2_driver: device closed
+lab2_driver: device opened (count=8)
+lab2_driver: sent 10 bytes to user
+Message_3
+lab2_driver: device closed
+[7] Kernel messages (dmesg):
+lab2_driver: device closed
+lab2_driver: device opened (count=6)
+lab2_driver: sent 10 bytes to user
+lab2_driver: device closed
+lab2_driver: device opened (count=7)
+lab2_driver: received 10 bytes: [Message_3
+lab2_driver: device closed
+lab2_driver: device opened (count=8)
+lab2_driver: sent 10 bytes to user
+lab2_driver: device closed
+=== Test PASSED ===
+/ # QEMU: Terminated
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mcat ~/embedded_lab2/logs/[27m[7mb[27m[7moot_log.txt[27m[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ cat ~/embedded_lab2/logs/boot_log.txt
+[?2004l]133;C\]666;vte.shell.preexec!\Script started on 2026-09-22 09:14:26+07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="90" LINES="43"]
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mqemu-system-arm \[27m
+[7m  -M vexpress-a9 \[27m
+[7m  -cpu cortex-a9 \[27m
+[7m  -m 512M \[27m
+[7m  -smp 2 \[27m
+[7m  -nographic \[27m
+[7m  -kernel ~/embedded_lab1/output/zImage \[27m
+[7m  -dtb ~/embedded_lab1/output/vexpress-v2p-ca9.dtb \[27m
+[7m  -initrd ~/embedded_lab2/output/initramfs_lab2.cpio.gz \[27m
+[7m  -append 'console=ttyAMA0,115200 rdinit=/sbin/init mem=512M'[27m[A[A[A[A[A[A[A[A[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ qemu-system-arm \
+  -M vexpress-a9 \
+  -cpu cortex-a9 \
+  -m 512M \
+  -smp 2 \
+  -nographic \
+  -kernel ~/embedded_lab1/output/zImage \
+  -dtb ~/embedded_lab1/output/vexpress-v2p-ca9.dtb \
+  -initrd ~/embedded_lab2/output/initramfs_lab2.cpio.gz \
+  -append 'console=ttyAMA0,115200 rdinit=/sbin/init mem=512M'
+[?2004l]133;C\]666;vte.shell.preexec!\Booting Linux on physical CPU 0x0
+Linux version 5.15.0 (quyen@quyen-ThinkPad-T14-Gen-1) (arm-linux-gnueabihf-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ld (GNU Binutils for Ubuntu) 2.46) #1 SMP Mon Sep 14 18:56:00 +07 2026
+CPU: ARMv7 Processor [410fc090] revision 0 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+OF: fdt: Machine model: V2P-CA9
+Memory policy: Data cache writealloc
+Reserved memory: created DMA memory pool at 0x4c000000, size 8 MiB
+OF: reserved mem: initialized node vram@4c000000, compatible id shared-dma-pool
+cma: Reserved 16 MiB at 0x7f000000
+Zone ranges:
+  Normal   [mem 0x0000000060000000-0x000000007fffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000060000000-0x000000007fffffff]
+Initmem setup node 0 [mem 0x0000000060000000-0x000000007fffffff]
+percpu: Embedded 15 pages/cpu s30156 r8192 d23092 u61440
+Built 1 zonelists, mobility grouping on.  Total pages: 130048
+Kernel command line: console=ttyAMA0,115200 rdinit=/sbin/init mem=512M
+printk: log_buf_len individual max cpu contribution: 4096 bytes
+printk: log_buf_len total cpu_extra contributions: 12288 bytes
+printk: log_buf_len min size: 16384 bytes
+printk: log_buf_len: 32768 bytes
+printk: early log buf free: 14980(91%)
+Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+Memory: 489760K/524288K available (8192K kernel code, 593K rwdata, 1784K rodata, 1024K init, 151K bss, 18144K reserved, 16384K cma-reserved)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+trace event string verifier disabled
+rcu: Hierarchical RCU implementation.
+rcu: 	RCU event tracing is enabled.
+rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C: platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C: DT/platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 dynamic clock gating disabled, standby mode disabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x46420001
+random: get_random_bytes called from start_kernel+0x4f8/0x6ac with crng_init=0
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: arm,sp804: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Failed to initialize '/bus@40000000/motherboard-bus@40000000/iofpga@7,00000000/timer@12000': -22
+smp_twd: clock not found -2
+Console: colour dummy device 80x30
+Calibrating local timer... 100.47MHz.
+Calibrating delay loop... 657.81 BogoMIPS (lpj=3289088)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+CPU0: Spectre v2: using BPIALL workaround
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x60100000 - 0x60100060
+rcu: Hierarchical SRCU implementation.
+smp: Bringing up secondary CPUs ...
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU1: Spectre v2: using BPIALL workaround
+CPU2: failed to boot: -38
+CPU3: failed to boot: -38
+smp: Brought up 1 node, 2 CPUs
+SMP: Total of 2 processors activated (1292.69 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 0
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+hw-breakpoint: debug architecture 0x4 unsupported.
+Serial: AMBA PL011 UART driver
+irq: type mismatch, failed to map hwirq-75 for interrupt-controller@1e001000!
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource arm,sp804
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
+TCP bind hash table entries: 4096 (order: 3, 32768 bytes, linear)
+TCP: Hash tables configured (established 4096 bind 4096)
+UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Unpacking initramfs...
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+workingset: timestamp_bits=30 max_order=17 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+9p: Installing v9fs 9p2000 file system support
+io scheduler mq-deadline registered
+io scheduler kyber registered
+sii902x 0-0060: supply iovcc not found, using dummy regulator
+sii902x 0-0060: supply cvcc12 not found, using dummy regulator
+Freeing initrd memory: 1120K
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x40000000-0x43ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x44000000-0x47ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+Concatenating MTD devices:
+(0): "40000000.flash"
+(1): "40000000.flash"
+into device "40000000.flash"
+physmap-flash 48000000.psram: physmap platform flash device: [mem 0x48000000-0x49ffffff]
+libphy: Fixed MDIO Bus: probed
+libphy: smsc911x-mdio: probed
+smsc911x 4e000000.ethernet eth0: MAC Address: 52:54:00:12:34:56
+isp1760 4f000000.usb: isp1760 bus width: 32, oc: digital
+isp1760 4f000000.usb: NXP ISP1760 USB Host Controller
+isp1760 4f000000.usb: new USB bus registered, assigned bus number 1
+isp1760 4f000000.usb: Scratch test failed. 0x00000000
+isp1760 4f000000.usb: can't setup: -19
+isp1760 4f000000.usb: USB bus 1 deregistered
+usbcore: registered new interface driver usb-storage
+ledtrig-cpu: registered to indicate activity on CPUs
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_PACKET protocol family
+9pnet: Installing 9P2000 support
+Registering SWP/SWPB emulation handler
+aaci-pl041 10004000.aaci: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+aaci-pl041 10004000.aaci: FIFO 512 entries
+mmci-pl18x 10005000.mmci: Got CD GPIO
+mmci-pl18x 10005000.mmci: Got WP GPIO
+mmci-pl18x 10005000.mmci: mmc0: PL181 manf 41 rev0 at 0x10005000 irq 33,34 (pio)
+10009000.uart: ttyAMA0 at MMIO 0x10009000 (irq = 37, base_baud = 0) is a PL011 rev1
+printk: console [ttyAMA0] enabled
+1000a000.uart: ttyAMA1 at MMIO 0x1000a000 (irq = 38, base_baud = 0) is a PL011 rev1
+1000b000.uart: ttyAMA2 at MMIO 0x1000b000 (irq = 39, base_baud = 0) is a PL011 rev1
+1000c000.uart: ttyAMA3 at MMIO 0x1000c000 (irq = 40, base_baud = 0) is a PL011 rev1
+rtc-pl031 10017000.rtc: registered as rtc0
+rtc-pl031 10017000.rtc: setting system clock to 2026-09-22T02:14:40 UTC (1790043280)
+amba 10020000.clcd: Fixing up cyclic dependency with 0-0039
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+input: AT Raw Set 2 keyboard as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10006000.kmi/serio0/input/input0
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+sii902x 0-0039: supply iovcc not found, using dummy regulator
+sii902x 0-0039: supply cvcc12 not found, using dummy regulator
+i2c i2c-0: Added multiplexed i2c bus 2
+drm-clcd-pl111 1001f000.clcd: assigned reserved memory node vram@4c000000
+drm-clcd-pl111 1001f000.clcd: using device-specific reserved memory
+drm-clcd-pl111 1001f000.clcd: core tile graphics present
+drm-clcd-pl111 1001f000.clcd: this device will be deactivated
+drm-clcd-pl111 1001f000.clcd: Versatile Express init failed - -19
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+drm-clcd-pl111 10020000.clcd: found bridge on endpoint 0
+drm-clcd-pl111 10020000.clcd: Using non-panel bridge
+[drm] Initialized pl111 1.0.0 20170317 for 10020000.clcd on minor 0
+Console: switching to colour frame buffer device 128x48
+drm-clcd-pl111 10020000.clcd: [drm] fb0: pl111 frame buffer device
+ALSA device list:
+  #0: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+Freeing unused kernel image (initmem) memory: 1024K
+Run /sbin/init as init process
+[ LAB-02 ] Starting]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ 
+[?2004l]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo apt install -y mtd-u[27m[7mt[27m[7mils [27m
+[7msudo apt install -y squashfs-tools[27m[A[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ sudo apt install -y mtd-utils
+sudo apt install -y squashfs-tools
+[?2004l]133;C\]666;vte.shell.preexec!\[sudo: authenticate] Password: ******      
+Reading package lists... 0%Reading package lists... 100%                              Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%                                Reading state information... 0%Reading state information... 0%                                mtd-utils is already the newest version (1:2.3.0-1ubuntu2).
+Solving dependencies... 0%Solving dependencies... 10%                            Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 2
+]133;C\]666;vte.shell.preexec!\Reading package lists... 0%Reading package lists... 100%                              Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%                                Reading state information... 0%Reading state information... 0%                                squashfs-tools is already the newest version (1:4.7.5-1).
+Solving dependencies... 0%Solving dependencies... 10%                            Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 2
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mwhich flash_erase mkfs.jf[27m[7mf[27m[7ms2 nandwrite nanddump mtdinfo[27m[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ which flash_erase mkfs.jffs2 nandwrite nanddump mtdinfo
+[?2004l]133;C\]666;vte.shell.preexec!\/usr/sbin/flash_erase
+/usr/sbin/mkfs.jffs2
+/usr/sbin/nandwrite
+/usr/sbin/nanddump
+/usr/sbin/mtdinfo
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo modprobe nandsim[27msudo modprobe nandsim
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo modprobe nandsim fir[27m[7ms[27m[7mt_id_byte=0x20 second_id_byte=0x35[27m[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ sudo modprobe nandsim first_id_byte=0x20 second_id_byte=0x35
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo modprobe mtdblock [27m
+[7msudo modprobe jffs2 [27m
+[7mcat /proc/mtd [27m
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo modprobe mtdblock 
+sudo modprobe jffs2 
+cat /proc/mtd 
+[A
+[?2004l]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\dev:    size   erasesize  name
+mtd0: 08000000 00004000 "NAND simulator partition 0"
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mls /dev/mtdblock* [27mls /dev/mtdblock* 
+[?2004l]133;C\]666;vte.shell.preexec!\[0m[40;33;01m/dev/mtdblock0[0m
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mls /dev/mtd*[27mls /dev/mtd*
+[?2004l]133;C\]666;vte.shell.preexec!\[0m[40;33;01m/dev/mtd0[0m  [40;33;01m/dev/mtd0ro[0m  [40;33;01m/dev/mtdblock0[0m
+
+/dev/mtd:
+[01;34mby-name[0m
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo mtdinfo /dev/mtd0[27msudo mtdinfo /dev/mtd0
+[?2004l]133;C\]666;vte.shell.preexec!\mtd0
+Name:                           NAND simulator partition 0
+Type:                           nand
+Eraseblock size:                16384 bytes, 16.0 KiB
+Amount of eraseblocks:          8192 (134217728 bytes, 128.0 MiB)
+Minimum input/output unit size: 512 bytes
+Sub-page size:                  256 bytes
+OOB size:                       16 bytes
+Character device major/minor:   90:0
+Bad blocks are allowed:         true
+Device is writable:             true
+
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mcat /proc/mtd[27mcat /proc/mtd
+[?2004l]133;C\]666;vte.shell.preexec!\dev:    size   erasesize  name
+mtd0: 08000000 00004000 "NAND simulator partition 0"
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo flash_erase /dev/mtd[27m[7m0[27m[7m 0 0[27m[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ sudo flash_erase /dev/mtd0 0 0
+[?2004l]133;C\]666;vte.shell.preexec!\Erasing 131072 Kibyte @ 0 --  0 % complete Erasing 131072 Kibyte @ 0 -- 100 % complete 
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mmkdir -p /tmp/jffs2_data[27m
+[7mecho 'Hello from JFFS2!' > /tmp/jffs2_data/hello.txt[27m
+[7mecho 'Embedded Linux Lab2' > /tmp/jffs2_data/info.txt[27m
+[7mmkdir -p /tmp/jffs2_data/logs[27m
+[7mdate > /tmp/jffs2_data/logs/boot.log[27m
+[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir -p /tmp/jffs2_data
+echo 'Hello from JFFS2!' > /tmp/jffs2_data/hello.txt
+echo 'Embedded Linux Lab2' > /tmp/jffs2_data/info.txt
+mkdir -p /tmp/jffs2_data/logs
+date > /tmp/jffs2_data/logs/boot.log
+[A
+[?2004l]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo mkfs.jffs2 \[27m
+[7m    --root=/tmp/jffs2_data \[27m
+[7m    --eraseblock=0x4000 \[27m
+[7m    --output=/tmp/rootfs.jffs2 \[27m
+[7m    --pad \[27m
+[7m    --no-cleanmarkers[27m
+[7mls -lh /tmp/rootfs.jffs2[27m
+[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo mkfs.jffs2 \
+    --root=/tmp/jffs2_data \
+    --eraseblock=0x4000 \
+    --output=/tmp/rootfs.jffs2 \
+    --pad \
+    --no-cleanmarkers
+ls -lh /tmp/rootfs.jffs2
+[A
+[?2004l]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\-rw-r--r-- 1 root root 16K Sep 22 09:32 /tmp/rootfs.jffs2
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo nandwrite -p /dev/mt[27m[7md[27m[7m0 /tmp/rootfs.jffs2[27m[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ sudo nandwrite -p /dev/mtd0 /tmp/rootfs.jffs2
+[?2004l]133;C\]666;vte.shell.preexec!\Writing data to block 0 at offset 0x0
+Written 30 blocks containing only 0xff bytes
+Those block may be incorrectly treated as empty!
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo mkdir -p /mnt/jffs2[27m
+[7msudo mount -t jffs2 /dev/mtdblock0 /mnt/jffs2[27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo mkdir -p /mnt/jffs2
+sudo mount -t jffs2 /dev/mtdblock0 /mnt/jffs2
+[A
+[?2004l]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mls -la /mnt/jffs2/[27m
+[7mcat /mnt/jffs2/hello.txt[27m
+[7mcat /mnt/jffs2/info.txt[27m
+[7mcat /mnt/jffs2/logs/boot.log[27m
+[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -la /mnt/jffs2/
+cat /mnt/jffs2/hello.txt
+cat /mnt/jffs2/info.txt
+cat /mnt/jffs2/logs/boot.log
+[A
+[?2004l]133;C\]666;vte.shell.preexec!\total 4
+drwxr-xr-x 4 root  root     0 Jan  1  1970 [0m[01;34m.[0m
+drwxr-xr-x 3 root  root  4096 Sep 22 09:32 [01;34m..[0m
+-rw-rw-r-- 1 quyen quyen   18 Sep 22 09:31 hello.txt
+-rw-rw-r-- 1 quyen quyen   20 Sep 22 09:31 info.txt
+drwxrwxr-x 2 quyen quyen    0 Sep 22 09:31 [01;34mlogs[0m
+]133;C\]666;vte.shell.preexec!\Hello from JFFS2!
+]133;C\]666;vte.shell.preexec!\Embedded Linux Lab2
+]133;C\]666;vte.shell.preexec!\Tue Sep 22 09:31:48 AM +07 2026
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo sh -c 'echo "Written[27m[7m [27m[7mat $(date)" >> /mnt/jffs2/logs/boot.log' [27m
+[7msudo sh -c 'echo "New runtime file" > /mnt/jffs2/runtime.txt'[27m
+[7mcat /mnt/jffs2/logs/boot.log[27m
+[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo sh -c 'echo "Written at $(date)" >> /mnt/jffs2/logs/boot.log'
+sudo sh -c 'echo "New runtime file" > /mnt/jffs2/runtime.txt'
+cat /mnt/jffs2/logs/boot.log
+[A
+[?2004l]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\Tue Sep 22 09:31:48 AM +07 2026
+Written at Tue Sep 22 09:32:45 AM +07 2026
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo umount /mnt/jffs2[27m
+[7msudo mount -t jffs2 /dev/mtdblock0 /mnt/jffs2[27m
+[7mcat /mnt/jffs2/logs/boot.log[27m
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo umount /mnt/jffs2
+sudo mount -t jffs2 /dev/mtdblock0 /mnt/jffs2
+cat /mnt/jffs2/logs/boot.log
+[A
+[?2004l]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\Tue Sep 22 09:31:48 AM +07 2026
+Written at Tue Sep 22 09:32:45 AM +07 2026
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mcat /mnt/jffs2/runtime.tx[27m[7mt[27m[7m [27m
+[7msudo umount /mnt/jffs2[27m
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat /mnt/jffs2/runtime.txt
+sudo umount /mnt/jffs2
+[A
+[?2004l]133;C\]666;vte.shell.preexec!\New runtime file
+]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo nanddump -o -l 512 /[27m[7md[27m[7mev/mtd0 /tmp/dump.bin[27m[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ sudo nanddump -o -l 512 /dev/mtd0 /tmp/dump.bin
+[?2004l]133;C\]666;vte.shell.preexec!\Usage: nanddump [OPTIONS] MTD-device
+Dumps the contents of a nand mtd partition.
+
+-h         --help               Display this help and exit
+           --version            Output version information and exit
+           --bb=METHOD          Choose bad block handling method (see below).
+-a         --forcebinary        Force printing of binary data to tty
+-c         --canonicalprint     Print canonical Hex+ASCII dump
+-f file    --file=file          Dump to file
+-l length  --length=length      Length
+-n         --noecc              Read without error correction
+           --omitoob            Omit OOB data (default)
+-o         --oob                Dump OOB data
+-p         --prettyprint        Print nice (hexdump)
+-q         --quiet              Don't display progress and status messages
+-s addr    --startaddress=addr  Start address
+           --skip-bad-blocks-to-start
+                                Skip bad blocks when seeking to the start address
+-C         --continuous         Continuous read up to a block of data at a time
+
+--bb=METHOD, where METHOD can be `padbad', `dumpbad', or `skipbad':
+    padbad:  dump flash data, substituting 0xFF for any bad blocks
+    dumpbad: dump flash data, including any bad blocks
+    skipbad: dump good data, completely skipping any bad blocks (default)
+]666;vte.shell.postexec=1\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mhexdump -C /tmp/dump.bin [27m[7m|[27m[7m head -20[27m[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ hexdump -C /tmp/dump.bin | head -20
+[?2004l]133;C\]666;vte.shell.preexec!\hexdump: /tmp/dump.bin: No such file or directory
+hexdump: all input file arguments failed
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo nanddump -o -l 512 -[27m[7mf[27m[7m /tmp/dump.bin /dev/mtd0[27m[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ sudo nanddump -o -l 512 -f /tmp/dump.bin /dev/mtd0
+[?2004l]133;C\]666;vte.shell.preexec!\ECC failed: 0
+ECC corrected: 0
+Number of bad blocks: 0
+Number of bbt blocks: 0
+Block size 16384, page size 512, OOB size 16
+Dumping data starting at 0x00000000 and ending at 0x00000200...
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7mls -la /tmp/dump.bin[27m
+[7mhexdump -C /tmp/dump.bin | head -20[27m[A]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ ls -la /tmp/dump.bin
+hexdump -C /tmp/dump.bin | head -20
+[?2004l]133;C\]666;vte.shell.preexec!\-rw-r--r-- 1 root root 528 Sep 22 09:34 /tmp/dump.bin
+]133;C\]666;vte.shell.preexec!\00000000  85 19 01 e0 31 00 00 00  1d d9 82 42 01 00 00 00  |....1......B....|
+00000010  00 00 00 00 02 00 00 00  94 e8 b1 6a 09 08 00 00  |...........j....|
+00000020  ac 46 d6 63 15 da 69 f4  68 65 6c 6c 6f 2e 74 78  |.F.c..i.hello.tx|
+00000030  74 ff ff ff 85 19 02 e0  56 00 00 00 09 64 e7 62  |t.......V....d.b|
+00000040  02 00 00 00 01 00 00 00  b4 81 00 00 e8 03 e8 03  |................|
+00000050  12 00 00 00 94 e8 b1 6a  94 e8 b1 6a 94 e8 b1 6a  |.......j...j...j|
+00000060  00 00 00 00 12 00 00 00  12 00 00 00 00 00 00 00  |................|
+00000070  ee dd 4b b3 8f 2d 85 27  48 65 6c 6c 6f 20 66 72  |..K..-.'Hello fr|
+00000080  6f 6d 20 4a 46 46 53 32  21 0a ff ff 85 19 01 e0  |om JFFS2!.......|
+00000090  30 00 00 00 78 be 3e fa  01 00 00 00 01 00 00 00  |0...x.>.........|
+000000a0  03 00 00 00 94 e8 b1 6a  08 08 00 00 37 fc a7 ee  |.......j....7...|
+000000b0  a9 de 79 72 69 6e 66 6f  2e 74 78 74 85 19 02 e0  |..yrinfo.txt....|
+000000c0  58 00 00 00 3a 13 38 82  03 00 00 00 01 00 00 00  |X...:.8.........|
+000000d0  b4 81 00 00 e8 03 e8 03  14 00 00 00 94 e8 b1 6a  |...............j|
+000000e0  94 e8 b1 6a 94 e8 b1 6a  00 00 00 00 14 00 00 00  |...j...j........|
+000000f0  14 00 00 00 00 00 00 00  8a 74 43 dd 0b 7a 29 7a  |.........tC..z)z|
+00000100  45 6d 62 65 64 64 65 64  20 4c 69 6e 75 78 20 4c  |Embedded Linux L|
+00000110  61 62 32 0a 85 19 01 e0  2c 00 00 00 5f 56 f1 e0  |ab2.....,..._V..|
+00000120  01 00 00 00 02 00 00 00  04 00 00 00 94 e8 b1 6a  |...............j|
+00000130  04 04 00 00 96 e7 3b f0  40 19 cb d1 6c 6f 67 73  |......;.@...logs|
+]666;vte.shell.postexec=0\]7;file://quyen-ThinkPad-T14-Gen-1/home/quyen/embedded_lab2/rootfs/initramfs\]0;quyen@quyen-ThinkPad-T14-Gen-1:~/embedded_lab2/rootfs/initramfs\]666;vte.shell.precmd!\[?2004h]0;quyen@quyen-ThinkPad-T14-Gen-1: ~/embedded_lab2/rootfs/initramfs[01;32mquyen@quyen-ThinkPad-T14-Gen-1[00m:[01;34m~/embedded_lab2/rootfs/initramfs[00m$ [7msudo rmmod nandsim[27m
+[7mls /dev/mtd* 2>/dev/null || echo 'MTD devices removed'[27m
+[A[A[C[C[C[C[C[
