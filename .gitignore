@@ -1,0 +1,4 @@
+kernel/linux-5.15.tar.xz
+kernel/linux-5.15/vmlinux
+kernel/linux-5.15/vmlinux.o
+*.o

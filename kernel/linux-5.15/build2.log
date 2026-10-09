@@ -1,0 +1,70 @@
+  CALL    scripts/atomic/check-atomics.sh
+  CALL    scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  MUNGE   arch/arm/vdso/vdso.so.dbg
+  AR      arch/arm/net/built-in.a
+./arch/arm/vdso/vdsomunge: Unexpected hard-float flag set in e_flags
+  AR      arch/arm/crypto/built-in.a
+make[2]: *** [arch/arm/vdso/Makefile:54: arch/arm/vdso/vdso.so.dbg] Error 1
+make[1]: *** [scripts/Makefile.build:540: arch/arm/vdso] Error 2
+  CC      arch/arm/common/firmware.o
+  CC      arch/arm/probes/decode.o
+make[1]: *** Waiting for unfinished jobs....
+  AS      arch/arm/common/secure_cntvoff.o
+  CC      arch/arm/probes/decode-arm.o
+  AS      arch/arm/common/mcpm_head.o
+  CC      arch/arm/probes/uprobes/core.o
+  CC      arch/arm/common/mcpm_entry.o
+  CC      arch/arm/probes/uprobes/actions-arm.o
+  CC      arch/arm/common/mcpm_platsmp.o
+  AS      arch/arm/common/vlock.o
+  AR      arch/arm/probes/uprobes/built-in.a
+  AR      arch/arm/probes/built-in.a
+  AR      virt/lib/built-in.a
+  AR      virt/built-in.a
+  AS      arch/arm/lib/ashldi3.o
+  AS      arch/arm/lib/ashrdi3.o
+  AS      arch/arm/lib/backtrace.o
+  AS      arch/arm/lib/bswapsdi2.o
+  AR      arch/arm/common/built-in.a
+make: *** [Makefile:1868: arch/arm] Error 2
+make: *** Waiting for unfinished jobs....
+  AS      arch/arm/lib/call_with_stack.o
+  AS      arch/arm/lib/changebit.o
+  AS      arch/arm/lib/clear_user.o
+  AS      arch/arm/lib/clearbit.o
+  AS      arch/arm/lib/copy_from_user.o
+  AS      arch/arm/lib/copy_page.o
+  AS      arch/arm/lib/copy_to_user.o
+  AS      arch/arm/lib/csumipv6.o
+  AS      arch/arm/lib/csumpartial.o
+  AS      arch/arm/lib/csumpartialcopy.o
+  AS      arch/arm/lib/csumpartialcopyuser.o
+  AS      arch/arm/lib/delay-loop.o
+  CC      arch/arm/lib/delay.o
+  AS      arch/arm/lib/div64.o
+  AS      arch/arm/lib/findbit.o
+  AS      arch/arm/lib/getuser.o
+  AS      arch/arm/lib/io-readsb.o
+  AS      arch/arm/lib/io-readsl.o
+  AS      arch/arm/lib/io-readsw-armv4.o
+  AS      arch/arm/lib/io-writesb.o
+  AS      arch/arm/lib/io-writesl.o
+  AS      arch/arm/lib/io-writesw-armv4.o
+  AS      arch/arm/lib/lib1funcs.o
+  AS      arch/arm/lib/lshrdi3.o
+  AS      arch/arm/lib/memchr.o
+  AS      arch/arm/lib/memcpy.o
+  AS      arch/arm/lib/memmove.o
+  AS      arch/arm/lib/memset.o
+  AS      arch/arm/lib/muldi3.o
+  AS      arch/arm/lib/putuser.o
+  AS      arch/arm/lib/setbit.o
+  AS      arch/arm/lib/strchr.o
+  AS      arch/arm/lib/strrchr.o
+  AS      arch/arm/lib/testchangebit.o
+  AS      arch/arm/lib/testclearbit.o
+  AS      arch/arm/lib/testsetbit.o
+  AS      arch/arm/lib/ucmpdi2.o
+  AR      arch/arm/lib/built-in.a
+  AR      arch/arm/lib/lib.a
